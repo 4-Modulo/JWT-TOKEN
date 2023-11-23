@@ -13,6 +13,8 @@ import { PedidoslistComponent } from './components/pedidos/pedidoslist/pedidosli
 import { PedidosdetailsComponent } from './components/pedidos/pedidosdetails/pedidosdetails.component';
 import { ProdutoslistComponent } from './components/produtos/produtoslist/produtoslist.component';
 import { ProdutosdetailsComponent } from './components/produtos/produtosdetails/produtosdetails.component';
+import { httpInterceptorProviders } from './interceptors/http-interceptor.service';
+import { LoginService } from './services/login.service';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { ProdutosdetailsComponent } from './components/produtos/produtosdetails/
   ],
   providers: [
     //colocar LoginService e o Interceptor aqui
+    httpInterceptorProviders,
+    LoginService
   ],
   bootstrap: [AppComponent]
 })

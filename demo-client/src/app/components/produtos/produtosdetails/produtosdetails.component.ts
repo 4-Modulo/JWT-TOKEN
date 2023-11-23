@@ -20,8 +20,8 @@ export class ProdutosdetailsComponent {
   }
 
   salvar() {
-
     //ISSO AQUI SERVE PARA EDITAR OU ADICIONAR... TANTO FAZ
+
     this.produtosService.save(this.produto).subscribe({
       next: produto => { // QUANDO DÁ CERTO
         this.retorno.emit(produto);
@@ -37,4 +37,3 @@ export class ProdutosdetailsComponent {
   }
 
 }
-
